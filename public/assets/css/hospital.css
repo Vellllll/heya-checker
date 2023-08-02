@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    position: relative;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    padding-bottom: 60px;
+}
+
+nav {
+    background-color: #002c6a;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0.85;
+}
+
+nav .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.logo a:hover {
+    transform: translateY(0px) scale(1.050) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+span .h, span .c {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-stethoscope {
+    color: rgb(108, 118, 255);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.heya {
+    color: white;
+}
+
+.checker {
+    color: rgb(108, 118, 255);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-right: 60px;
+}
+
+ul.nav-list a {
+    text-decoration: none;
+}
+
+ul.nav-list a :hover {
+    /* background-color: rgb(47, 76, 204); */
+    /* border-radius: 5px; */
+    transform: translateY(-2px);
+    transition: all 0.4s ease-out;
+}
+
+li.nav-item {
+    padding: 20px;
+    color: white;
+    height: 100%;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    margin: auto;
+}
+
+/* Hospital Navigation */
+.hospital-navigation {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    margin-top: 65px;
+}
+
+.hospital-navigation h1 {
+    margin-bottom: 15px;
+    font-size: 60px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+.hospital-navigation p {
+    font-size: 15px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+}
+
+.hospital-navigation form {
+    margin-bottom: 40px;
+    width: 50%;
+    margin: auto;
+}
+
+.hospital-navigation input {
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #002c6a;
+}
+
+button.add-hospital-button {
+    position: relative;
+    width: 60%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 0px 5px #c2bc0e;
+    transition: all 0.2s ease-out;
+}
+
+button.add-hospital-button:hover {
+    /* border-radius: 50px; */
+    color: white;
+
+}
+
+#addhospital:active {
+    top: 5px;
+    box-shadow: none;
+    transition: all .2s ease-in-out;
+}
+
+
+
+
+/* Hospital Card */
+.hospital-list {
+    width: 100%;
+    margin-bottom: 40px;
+    /* margin-top: 65px; */
+}
+
+.hospital-list-card {
+    width: 70%;
+    margin: auto;
+}
+
+table.hospital-card-table {
+    width: 100%;
+}
+
+.hospital-card {
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hospital/rs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-out;
+}
+
+.hospital-card:hover {
+    transform: translateY(0px) scale(1.050) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.hospital-link {
+    text-decoration: none;
+}
+
+td.hospital-image {
+    text-align: center;
+    max-width: 30em;
+    overflow: auto;
+    padding: 5%;
+}
+
+td.hospital-button {
+    width: 20%;
+}
+
+.hospital-image img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.hospital-info {
+    font-family: 'Barlow', sans-serif;
+}
+
+.hospital-info h2 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.hospital-info h3 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.hospital-info h4 {
+    font-size: 1.4em;
+    font-weight: 200;
+}
+
+button.edit-hospital-button, button.delete-hospital-button {
+    padding-left: .5em;
+    border-radius: 3px;
+    width: 75%;
+    color: white;
+    transition: all 0.5s ease-out;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+button.edit-hospital-button:hover, button.delete-hospital-button:hover {
+    border-radius: 50px;
+    color: white;
+}
+
+/* Footer */
+
+.footer {
+    padding: 50px 20px 40px 20px;
+    width: 100%;
+    margin: auto;
+    background-color: #002c6a;
+}
+
+table.footer-table {
+    width: 50%;
+    margin-left: 150px;
+}
+
+.footer-cell p {
+    color: white;
+}
+
+.footer-cell {
+    margin-right: 500px;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    color: blue;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: 3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #C13584;
+    color: #ffffff;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+    background: #25D366;
+    color: #ffffff;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+    background: #BB001B;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: rgb(143, 203, 255);
+    color: #ffffff;
+}
+
+.wrapper .instagram a {
+    color: black;
+}
+
+.wrapper .whatsapp a {
+    color: black;
+}
+
+
+
+
+

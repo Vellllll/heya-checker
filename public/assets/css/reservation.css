@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    background-color: #f9fbfc;
+}
+
+/* Alert Box */
+.alert-box {
+    z-index: 2000;
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #408efa;
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.alert-box.active {
+    transform: translateX(0%);
+}
+
+.alert-box .alert-box-content {
+    display: flex;
+    align-items: center;
+}
+
+.alert-box-content .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #408efa;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.alert-box-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text {
+    font-size: 20px;
+    flex-direction: 400;
+    margin: 0 20px;
+}
+
+.message .text.text-1 {
+    font-weight: 600;
+    color: #333;
+}
+
+.alert-box .close {
+    position: fixed;
+    top: 130px;
+    right: 35px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.alert-box .close:hover {
+    opacity: 1;
+}
+
+.alert-box .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.alert-box .progress:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+}
+
+.progress.active:before {
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    padding-bottom: 60px;
+}
+
+nav {
+    background-color: #002c6a;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0.85;
+}
+
+nav .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.logo a:hover {
+    transform: translateY(0px) scale(1.050) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+span .h, span .c {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-stethoscope {
+    color: rgb(108, 118, 255);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.heya {
+    color: white;
+}
+
+.checker {
+    color: rgb(108, 118, 255);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-right: 60px;
+}
+
+ul.nav-list a {
+    text-decoration: none;
+}
+
+ul.nav-list a :hover {
+    /* background-color: rgb(47, 76, 204); */
+    /* border-radius: 5px; */
+    transform: translateY(-2px);
+    transition: all 0.4s ease-out;
+}
+
+li.nav-item {
+    padding: 20px;
+    color: white;
+    height: 100%;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    margin: auto;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/reservationpage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Reservation Form */
+.reservation {
+    width: 55%;
+    margin: auto;
+}
+
+.reservation h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+.reservation form {
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 5%;
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.reservation label {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+}
+
+input.reservation-form {
+    border-bottom: 2px solid blue;
+}
+
+.reservation-form, .select-reservation-form {
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid blue;
+    border-radius: 0;
+    outline: none;
+}
+
+.reservation .button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 4px;
+    position: relative;
+    background-color: #3951cd;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047;
+    border-radius: 2px;
+}
+
+.reservation .button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px rgb(143, 203, 255);
+    color: #000;
+}
+
+.reservation .button:after {
+    content: "";
+    background: #1abc9c;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.reservation .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.reservation .button:focus { outline:0; }
+
+/* Popup Alert */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.alert {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.alert h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.alert .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.alert .close:hover {
+    color: #06D85F;
+}
+  .alert .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+    .alert{
+      width: 70%;
+    }
+}
+
+/* Footer */
+
+.footer {
+    padding: 50px 20px 40px 20px;
+    width: 100%;
+    margin: auto;
+    background-color: #002c6a;
+}
+
+table.footer-table {
+    width: 50%;
+    margin-left: 150px;
+}
+
+.footer-cell p {
+    color: white;
+}
+
+.footer-cell {
+    margin-right: 500px;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    color: blue;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: 3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #C13584;
+    color: #ffffff;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+    background: #25D366;
+    color: #ffffff;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+    background: #BB001B;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: rgb(143, 203, 255);
+    color: #ffffff;
+}
+
+.wrapper .instagram a {
+    color: black;
+}
+
+.wrapper .whatsapp a {
+    color: black;
+}

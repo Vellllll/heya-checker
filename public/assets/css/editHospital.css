@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    background-color: #f9fbfc;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/reservationpage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Reservation Form */
+.hospital-data {
+    width: 65%;
+    margin: auto;
+
+}
+
+.hospital-data h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+.hospital-data form {
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 4%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hospital-data label {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+}
+
+.edit-hospital-input, .select-hospital-data-form {
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid blue;
+    border-radius: 0;
+    outline: none;
+}
+
+.hospital-data .button {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 4px;
+    position: relative;
+    background-color: #3951cd;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047;
+    border-radius: 2px;
+}
+
+.hospital-data .button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px rgb(143, 203, 255);
+    color: #000;
+}
+
+.hospital-data .button:after {
+    content: "";
+    background: #1abc9c;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.hospital-data .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.hospital-data .button:focus { outline:0; }
+
+/* Back Button */
+.back-button {
+    text-align: center;
+    /* margin-top: 20px;
+    margin-bottom: 6px; */
+    width: 65%;
+    margin: auto;
+}
+
+.back-button button {
+    position: relative;
+    background-color: #ffc107;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    box-shadow: 0px 6px #c2bc0e;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+
+#back:active {
+    top: 6px;
+    box-shadow: none;
+}

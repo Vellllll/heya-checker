@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    background-color: #f9fbfc;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    padding-bottom: 60px;
+}
+
+nav {
+    background-color: #002c6a;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0.85;
+}
+
+nav .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.logo a:hover {
+    transform: translateY(0px) scale(1.050) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+span .h, span .c {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-stethoscope {
+    color: rgb(108, 118, 255);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.heya {
+    color: white;
+}
+
+.checker {
+    color: rgb(108, 118, 255);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-right: 60px;
+}
+
+ul.nav-list a {
+    text-decoration: none;
+}
+
+ul.nav-list a :hover {
+    /* background-color: rgb(47, 76, 204); */
+    /* border-radius: 5px; */
+    transform: translateY(-2px);
+    transition: all 0.4s ease-out;
+}
+
+li.nav-item {
+    padding: 20px;
+    color: white;
+    height: 100%;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    margin: auto;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/reservationpage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Reservation Navigation */
+.reservation-navigation {
+    margin: auto;
+    text-align: center;
+    width: 20%;
+    margin-top: 65px;
+    margin-bottom: 20px;
+}
+
+.reservation-navigation h2 {
+    margin-bottom: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+.reservation-navigation p {
+    font-size: 15px;
+    opacity: 0.6;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+}
+
+.reservation-navigation form {
+    margin-bottom: 40px;
+
+}
+
+.reservation-navigation input {
+    margin: auto;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid blue;
+}
+
+/* Reservation List */
+.reservation-list {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    margin: auto;
+    width: 85%;
+    margin-bottom: 65px;
+    border: 1px solid #f1f1f1;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+table.reservation-table {
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+th.reservation-head {
+    /* border: 1px solid black; */
+    padding: 10px 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+
+
+td.reservation-cell {
+    padding: 10px 10px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+td.reservation-button {
+    text-align: center;
+}
+
+td.check-button {
+    text-align: center;
+}
+
+/* Reservation Done List */
+
+.reservation-done-card {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    margin: auto;
+    width: 85%;
+    margin-bottom: 65px;
+    border: 1px solid #f1f1f1;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.reservation-done-list h4 {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* margin-bottom: 30px; */
+}
+
+td.status {
+    text-align: center;
+    color: green;
+
+}
+
+/* Back Button */
+.back-button {
+    text-align: center;
+    margin-bottom: 65px;
+    width: 85%;
+    margin: auto;
+}
+
+.back-button button {
+    background-color: #ffc107;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    box-shadow: 0px 6px #c2bc0e;
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+
+#back:active {
+    margin-top: 6px;
+    box-shadow: none;
+}
+
